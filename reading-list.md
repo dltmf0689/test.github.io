@@ -1,8 +1,8 @@
 ---
-title: Reading List
+title: Paper List
 subtitle: a list of books I read
 layout: "page"
-icon: fa-book
+icon: fa-pencil-alt
 order: 3
 ---
 
