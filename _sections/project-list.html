@@ -6,6 +6,18 @@ order: 2
 
 <p>프로젝트 1</p>
 
+<div id="header">
+  헤top
+  <div class="top">
+    {%- include logo.html -%}
+    {%- include nav.html section_items=include.scrolly_nav -%}
+  </div>
+  <div class="bottom">
+    bottom
+  </div>
+</div>
+
+
   <table border="1">
   <th>테이블</th>
   <th>만들기</th>
