@@ -1,26 +1,20 @@
 source "https://rubygems.org"
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-gem "jekyll", "3.4.0"
+# coding: utf-8
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
+Gem::Specification.new do |spec|
+  spec.name          = "jekyll-theme-prologue"
+  spec.version       = "0.3.2"
+  spec.authors       = ["HTML5 UP", "Chris Bobbe"]
+  spec.email         = ["csbobbe@gmail.com"]
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
+  spec.summary       = %q{A Jekyll version of the Prologue theme by HTML5 UP.}
+  spec.description   = "A Jekyll version of the Prologue theme by HTML5 UP. Demo: https://chrisbobbe.github.io/jekyll-theme-prologue/"
+  spec.homepage      = "https://github.com/chrisbobbe/jekyll-theme-prologue"
+  spec.license       = "CC-BY-3.0"
 
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|_config.yml|404.html|LICENSE|README)}i) }
+
+  spec.add_development_dependency "jekyll", "~> 3.3"
+  spec.add_development_dependency "bundler", "~> 1.12"
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
