@@ -2,10 +2,12 @@
 title: Third Post
 author: Chris
 layout: post
-icon: fa-lightbulb
-icon-style: regular
 ---
-See the icon?
+
+<!-- See the icon?
+icon: fa-lightbulb
+icon-style: regular -->
+
 
 Lorem ipsum dolor sit amet, harum malorum nominavi mea et. Atqui maluisset duo cu, summo dignissim voluptatum sit ut. Ad quo quidam delicatissimi. Cum nihil noster patrioque id. Per at maiorum definitiones. Cu vix sint aliquip. No duo alia sale persecuti.
 
