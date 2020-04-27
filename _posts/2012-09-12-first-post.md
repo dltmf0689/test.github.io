@@ -31,7 +31,7 @@ layout: post
 > visited[i] = true // 방문, visited[i] = false // 미방문  
 
 > 1) DFS 수행과정
-> 무방향 그래프의 깊이우선탐색 결과
+> 무방향 그래프의 깊이우선탐색 결과<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
 
 
