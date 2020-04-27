@@ -33,10 +33,20 @@ layout: post
 > 무방향 그래프의 깊이우선탐색 결과<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
 
-> visited[] 배열을 보면 모든 정점의 방문 여부를 false로 하여 방문하지 않은 것을 표시하며 stack[]에는 순회를 시작할 정점을 넣어둠<br>
+> visited[] 배열을 보면 모든 정점의 방문 여부를 false로 하여 방문하지 않은 것을 표시
+> stack[]에는 순회를 시작할 정점을 넣어둠<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span><br>
 
+> stack[]을 pop하여 0을 삭제
+> 0 정점을 방문하고 visited[0]을 true로 바꾸어 <br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span><br>
 
+> 정점 0과 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_4.png' | relative_url }}" alt="" /></span><br>
+
+> stack[]을 pop하여 1을 삭제
+> 1정점을 방문하고 visited[1]을 true로 바꿔줌<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_5.png' | relative_url }}" alt="" /></span><br>
 
 
 ```java
