@@ -5,8 +5,6 @@ layout: post
 ---
 
 
-<span class="image left"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
-
 ## 그래프 탐색 알고리즘
 (그래프의 모든 노드를 방문)
 
@@ -23,6 +21,9 @@ layout: post
     - 완전 탐색 입니다.
     - 트리에서 최단 거리 탐색 가능합니다.
     - 가중치 및 비가중치 그래프에서는 거의 사용되지 않습니다.(불가능하다, 가능은하나... 와 같은 여러 의견들이 있습니다)
+
+
+
 <span class="image left"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
 
 # 2. 너비 우선 탐색(BFS)
