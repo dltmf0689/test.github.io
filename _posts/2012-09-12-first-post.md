@@ -22,40 +22,38 @@ layout: post
     - 가중치 및 비가중치 그래프에서는 거의 사용되지 않습니다.(불가능하다, 가능은하나... 와 같은 여러 의견들이 있습니다)
 
 > 1) DFS 수행과정
-> DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법  <br><br>
-
-> <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>  
+DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법  <br><br>
+<span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>  
 
 > [깊이 우선 탐색의 수행 순서]
-> ⑴ 시작 정점 v를 결정하여 방문한다.  
-> ⑵ 정점 v에 인접한 정점 중에서  
->   ① 방문하지 않은 정점 w가 있으면, 정점 v를 스택에 push하고 정점 w를 방문한다. 그리고 w를 v로 하여 다시 ⑵를 반복한다.  
->   ② 방문하지 않은 정점이 없으면, 탐색의 방향을 바꾸기 위해서 스택을 pop하여 받은 가장 마지막 방문 정점을 v로 하여 다시 ⑵를 반복한다.  
-> ⑶ 스택이 공백이 될 때까지 ⑵를 반복한다.  
+⑴ 시작 정점 v를 결정하여 방문한다.  
+⑵ 정점 v에 인접한 정점 중에서  
+    ① 방문하지 않은 정점 w가 있으면, 정점 v를 스택에 push하고 정점 w를 방문한다. 그리고 w를 v로 하여 다시 ⑵를 반복한다.  
+    ② 방문하지 않은 정점이 없으면, 탐색의 방향을 바꾸기 위해서 스택을 pop하여 받은 가장 마지막 방문 정점을 v로 하여 다시 ⑵를 반복한다.  
+⑶ 스택이 공백이 될 때까지 ⑵를 반복한다.  
 
 > 시작 정점의 한 방향으로 갈 수 있는 경로가 있는 곳까지 깊이 탐색해 가다가 더 이상 갈 곳이 없게 되면,  
-> 가장 마지막에 만났던 갈림길 간선이 있는 정점으로 되돌아와서 다른 방향의 간선으로 탐색을 계속 반복하여 결국 모든 정점을 방문하는 순회방법.  
-> 가장 마지막에 만났던 갈림길 간선의 정점으로 가장 먼저 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용.  
+가장 마지막에 만났던 갈림길 간선이 있는 정점으로 되돌아와서 다른 방향의 간선으로 탐색을 계속 반복하여 결국 모든 정점을 방문하는 순회방법.  
+가장 마지막에 만났던 갈림길 간선의 정점으로 가장 먼저 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용.  
 
 > [알고리즘]  
-> <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>  
+<span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>  
 
 > ① 정점 A를 시작으로 깊이 우선 탐색을 시작  
-> visited[A]←true;  
-> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>  
+visited[A]←true;  
+<span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>  
 
 > ② 정점 A에 방문하지 않은 정점 B, C가 있으므로 A를 스택에 push 하고, 인접정점 B와 C 중에서 오름차순에 따라 B를 선택하여 탐색을 계속한다.  
-> push(stack, A);  
-> visited[B]←true;  
-> B 방문;  
-> <span class="image center"><img src="{{ 'assets/images/dfs_4.png' | relative_url }}" alt="" /></span>  
+push(stack, A);  
+visited[B]←true;  
+B 방문;  
+<span class="image center"><img src="{{ 'assets/images/dfs_4.png' | relative_url }}" alt="" /></span>  
 
 > ③ 정점 B에 방문하지 않은 정점 D, E가 있으므로 B를 스택에 push 하고, 인접정점 D와 E 중에서 오름차순에 따라 D를 선택하여 탐색을 계속한다.  
-
-> push(stack, B);  
-> visited[D]←true;  
-> D 방문;  
-> <span class="image center"><img src="{{ 'assets/images/dfs_5.png' | relative_url }}" alt="" /></span>  
+push(stack, B);  
+visited[D]←true;  
+D 방문;  
+<span class="image center"><img src="{{ 'assets/images/dfs_5.png' | relative_url }}" alt="" /></span>  
 
 > ④ 정점 D에 방문하지 않은 정점 G가 있으므로 D를 스택에 push 하고, 인접정점 G를 선택하여 탐색을 계속한다.  
 push(stack, D);  
