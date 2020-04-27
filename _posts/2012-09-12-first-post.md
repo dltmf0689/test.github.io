@@ -31,7 +31,7 @@ layout: post
 > visited[i] = true // 방문, visited[i] = false // 미방문  
 
 
-```c++
+```java
 public class DFS {
   public static void depthFS(int[][] graph, int vertex){
     Stack stack = new Stack(100);
