@@ -48,6 +48,20 @@ layout: post
 > 1정점을 방문하고 visited[1]을 true로 바꿔줌<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_5.png' | relative_url }}" alt="" /></span><br>
 
+> 정점 1과 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_6.png' | relative_url }}" alt="" /></span><br>
+
+> stack[]을 pop하여 4를 삭제
+> 4정점을 방문하고 visited[4]를 true로 바꿔줌<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_7.png' | relative_url }}" alt="" /></span><br>
+
+> 정점 4와 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_8.png' | relative_url }}" alt="" /></span><br>
+
+> stack[]을 pop하여 2를 삭제
+> 2정점을 방문하고 visited[2]를 true로 바꿔줌<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_9.png' | relative_url }}" alt="" /></span><br>
+
 
 ```java
 public class DFS {
