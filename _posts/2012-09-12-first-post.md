@@ -30,8 +30,8 @@ layout: post
 > 단, 이 연산을 구하기 위해서는 정점들의 방문 여부를 표시해 두는 것이 필요하다. 이는 배열 visited[n]을 사용하여 아래와 같이 표기한다.
 > visited[i] = true // 방문, visited[i] = false // 미방문  
 
-1) DFS 수행과정
-무방향 그래프의 깊이우선탐색 결과
+> 1) DFS 수행과정
+> 무방향 그래프의 깊이우선탐색 결과
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
 
 
