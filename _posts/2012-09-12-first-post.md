@@ -50,17 +50,17 @@ layout: post
 > B 방문;  
 > <span class="image center"><img src="{{ 'assets/images/dfs_4.png' | relative_url }}" alt="" /></span>  
 
-> ③ 정점 B에 방문하지 않은 정점 D, E가 있으므로 B를 스택에 push 하고, 인접정점 D와 E 중에서 오름차순에 따라 D를 선택하여 탐색을 계속한다.
+> ③ 정점 B에 방문하지 않은 정점 D, E가 있으므로 B를 스택에 push 하고, 인접정점 D와 E 중에서 오름차순에 따라 D를 선택하여 탐색을 계속한다.  
 
-> push(stack, B);
-> visited[D]←true;
-> D 방문;
+> push(stack, B);  
+> visited[D]←true;  
+> D 방문;  
 > <span class="image center"><img src="{{ 'assets/images/dfs_5.png' | relative_url }}" alt="" /></span>  
 
-> ④ 정점 D에 방문하지 않은 정점 G가 있으므로 D를 스택에 push 하고, 인접정점 G를 선택하여 탐색을 계속한다.
-push(stack, D);
-visited[G]←true;
-G 방문;
+> ④ 정점 D에 방문하지 않은 정점 G가 있으므로 D를 스택에 push 하고, 인접정점 G를 선택하여 탐색을 계속한다.  
+push(stack, D);  
+visited[G]←true;  
+G 방문;  
 <span class="image center"><img src="{{ 'assets/images/dfs_6.png' | relative_url }}" alt="" /></span>  
 
 
