@@ -25,7 +25,7 @@ layout: post
 DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법  <br><br>
 <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>  
 
-> [깊이 우선 탐색의 수행 순서]
+> [깊이 우선 탐색의 수행 순서]  
 ⑴ 시작 정점 v를 결정하여 방문한다.  
 ⑵ 정점 v에 인접한 정점 중에서  
     ① 방문하지 않은 정점 w가 있으면, 정점 v를 스택에 push하고 정점 w를 방문한다. 그리고 w를 v로 하여 다시 ⑵를 반복한다.  
@@ -61,13 +61,47 @@ visited[G]←true;
 G 방문;  
 <span class="image center"><img src="{{ 'assets/images/dfs_6.png' | relative_url }}" alt="" /></span>  
 
+> ⑤ 정점 G에 방문하지 않은 정점 E, F가 있으므로 G를 스택에 push 하고, 인접정점 E와 F 중에서 오름차순에 따라 E를 선택하여 탐색을 계속한다.  
+push(stack, G);  
+visited[E]←true;  
+E 방문;  
+<span class="image center"><img src="{{ 'assets/images/dfs_7.png' | relative_url }}" alt="" /></span>  
+
+> ⑥ 정점 E에 방문하지 않은 정점 C가 있으므로 E를 스택에 push 하고, 인접정점 C를 선택하여 탐색을 계속한다.  
+push(stack, E);  
+visited[C]←true;  
+C 방문;  
+<span class="image center"><img src="{{ 'assets/images/dfs_8.png' | relative_url }}" alt="" /></span>  
+
+> ⑦ 정점 C에서 방문하지 않은 인접정점이 없으므로, 마지막 정점으로 돌아가기 위해 스택을 pop 하여 받은 정점 E에 대해서 방문하지 않은 인접정점이 있는지 확인한다.  
+pop(stack);  
+<span class="image center"><img src="{{ 'assets/images/dfs_9.png' | relative_url }}" alt="" /></span>  
+
+> ⑧ 정점 E는 방문하지 않은 인접정점이 없으므로, 다시 스택을 pop 하여 받은 정점 G에 대해서 방문하지 않은 인접정점이 있는지 확인한다.  
+pop(stack);
+<span class="image center"><img src="{{ 'assets/images/dfs_10.png' | relative_url }}" alt="" /></span>  
+
+> ⑨ 정점 G에 방문하지 않은 정점 F가 있으므로 G를 스택에 push 하고, 인접정점 F를 선택하여 탐색을 계속한다.  
+push(stack, G);  
+visited[F]←true;  
+F 방문;  
+<span class="image center"><img src="{{ 'assets/images/dfs_11.png' | relative_url }}" alt="" /></span>  
+
+> ⑩ 정점 F에서 방문하지 않은 인접정점이 없으므로, 마지막 정점으로 돌아가기 위해 스택을 pop 하여 받은 정점 G에 대해서 방문하지 않은 인접정점이 있는지 확인한다.  
+pop(stack);
+<span class="image center"><img src="{{ 'assets/images/dfs_12.png' | relative_url }}" alt="" /></span>  
+
+> ⑪ 정점 G에서 방문하지 않은 인접정점이 없으므로, 다시 마지막 정점으로 돌아가기 위해 스택을 pop 하여 받은 정점 D에 대해서 방문하지 않은 인접정점이 있는지 확인한다.  
+pop(stack);  
+<span class="image center"><img src="{{ 'assets/images/dfs_13.png' | relative_url }}" alt="" /></span>  
 
 
+> ⑫ 모두 pop을 한다.  
 
+> ⑬ 현재 정점 A에서 방문하지 않은 인접 정점이 없으므로 마지막 정점으로 돌아가기 위해 스택을 pop하는데, 스택이 공백이므로 깊이 우선 탐색을 종료한다.  
+<span class="image center"><img src="{{ 'assets/images/dfs_14.png' | relative_url }}" alt="" /></span>  
 
-
-
-# 2. 너비 우선 탐색(BFS)
+# 2. 너비 우선 탐색(BFS, Breadth first search)
     - 현재 정점에 연결된 가까운 점들부터 탐색
     - 방법 : 큐를 이용해서 구현
     - 검색에 유용, DFS처럼 무한 루프에 빠질 위험성이 적음
@@ -75,12 +109,15 @@ G 방문;
     - 공간 복잡도가 지수적으로 증가하기 때문에 오버플로가 쉽게 됨
 
     *** 참고해야할 점
-
     - 방문했던 곳을 재 방문 하지 않기위해, 따로 배열을 만들어서 체크해야합니다.
     - 완전 탐색입니다.
     - 트리에서 최단거리 탐색이 가능합니다.
     - 비가중치 그래프에서 최단거리 탐색이 가능합니다. (다익스트라보다 효율이 좋다고 합니다.)
     - 가중치 그래프에서는 잘 사용되지 않습니다.
+
+> 2) BFS 수행 과정
+BFS란 큐를 이용하며 그래프를 탐색해 나가는 방법으로, 탐색에 대한 특징은 너비 우선 탐색은 깊이가 1인 모든 정점을 방문하고 나서, 그 다음에는 깊이가 2인 모든 정점을, 깊이가 3인 모든 정점을 방문하는 식으로 계속 방문하다가 더이상 방문할 곳이 없으면 탐색을 마치는 기법  
+<span class="image center"><img src="{{ 'assets/images/bfs_1.png' | relative_url }}" alt="" /></span>  
 
 
 # 3. 휴리스틱(heuristic) 탐색
