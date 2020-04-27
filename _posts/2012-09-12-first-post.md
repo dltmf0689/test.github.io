@@ -30,111 +30,19 @@ layout: post
 > visited[i] = true // 방문, visited[i] = false // 미방문  
 
 > 1) DFS 수행과정
-> 무방향 그래프의 깊이우선탐색 결과<br>
+> DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
 
-> visited[] 배열을 보면 모든 정점의 방문 여부를 false로 하여 방문하지 않은 것을 표시<br>
-> stack[]에는 순회를 시작할 정점을 넣어둠<br>
+> [깊이 우선 탐색의 수행 순서]
+
+> ⑴ 시작 정점 v를 결정하여 방문한다.  
+> ⑵ 정점 v에 인접한 정점 중에서  
+> ① 방문하지 않은 정점 w가 있으면, 정점 v를 스택에 push하고 정점 w를 방문한다. 그리고 w를 v로 하여 다시 ⑵를 반복한다.  
+> ② 방문하지 않은 정점이 없으면, 탐색의 방향을 바꾸기 위해서 스택을 pop하여 받은 가장 마지막 방문 정점을 v로 하여 다시 ⑵를 반복한다.  
+> ⑶ 스택이 공백이 될 때까지 ⑵를 반복한다.  
+
+> [알고리즘]
 > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span><br>
-
-> stack[]을 pop하여 0을 삭제<br>
-> 0 정점을 방문하고 visited[0]을 true로 바꿔줌 <br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span><br>
-
-> 정점 0과 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_4.png' | relative_url }}" alt="" /></span><br>
-
-> stack[]을 pop하여 1을 삭제<br>
-> 1정점을 방문하고 visited[1]을 true로 바꿔줌<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_5.png' | relative_url }}" alt="" /></span><br>
-
-> 정점 1과 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_6.png' | relative_url }}" alt="" /></span><br>
-
-> stack[]을 pop하여 4를 삭제<br>
-> 4정점을 방문하고 visited[4]를 true로 바꿔줌<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_7.png' | relative_url }}" alt="" /></span><br>
-
-> 정점 4와 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_8.png' | relative_url }}" alt="" /></span><br>
-
-> stack[]을 pop하여 2를 삭제<br>
-> 2정점을 방문하고 visited[2]를 true로 바꿔줌<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_9.png' | relative_url }}" alt="" /></span><br>
-
-> 정점 2와 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_10.png' | relative_url }}" alt="" /></span><br>
-
-> stack[]을 pop하여 5를 삭제<br>
-> 5정점을 방문하고 visited[5]를 true로 바꿔줌<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_11.png' | relative_url }}" alt="" /></span><br>
-
-> 정점 5와 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_12.png' | relative_url }}" alt="" /></span><br>
-
-> stack[]을 pop하여 3를 삭제<br>
-> 3정점을 방문하고 visited[3]를 true로 바꿔줌<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_13.png' | relative_url }}" alt="" /></span><br>
-
-> 정점 3과 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
-> 하지만 정점 3은 인접한 노드중 방문하지 않은 노드가 없기 때문에 그냥 넘어감<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_14.png' | relative_url }}" alt="" /></span><br>
-
-> stack[]을 pop하여 6을 삭제하여 6정점을 방문하고 visited[6]을 true로 바꿔줌<br>
-> 현재 모든 정점을 방문하였지만 아직 스택에는 데이터가 남아있음<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_15.png' | relative_url }}" alt="" /></span><br>
-
-> 모든 정점을 방문한 상태에서 스택에 데이터가 남아있는 경우 나머지 데이터들도 pop하지만 visited[]배열에 방문하지 않은 정점이 없기 때문에<br>
-> 계속 pop 연산만 하고 모든 데이터가 pop이 되면 종료<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_16.png' | relative_url }}" alt="" /></span><br>
-
-
-
-
-
-
-
-
-
-```java
-public class DFS {
-  public static void depthFS(int[][] graph, int vertex){
-    Stack stack = new Stack(100);
-    boolean[] visited = new boolean[graph.length];
-
-    for(int i=0; i<visited.length; i++){
-      visited[i] = false;
-    }
-    stack.push(vertex);
-    while(!stack.isEmpty()) {
-      int v = stack.pop();
-      if(visited[v] == false) {
-        System.out.print(v + "  ");
-        visited[v] = true;
-        for(int i = graph[v].length-1; i >= 0; i--) {
-          if(graph[v][i] == 1) {
-            if(visited[i] == false) {
-              stack.push(i);
-            }
-          }
-        }
-      }
-    }
-  }
-  public static void main(String[] args) {
-    int[][] graph = {
-                    {0,1,1,1,0,0,0},
-                    {1,0,0,0,1,0,0},
-                    {1,0,0,0,1,1,0},
-                    {1,0,0,0,0,1,0},
-                    {0,1,1,0,0,0,1},
-                    {0,0,1,1,0,0,1},
-                    {0,0,0,0,1,1,0}
-                    };
-    depthFS(graph,0);
-  }
-}
-```
 
 # 2. 너비 우선 탐색(BFS)
     - 현재 정점에 연결된 가까운 점들부터 탐색
