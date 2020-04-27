@@ -33,7 +33,7 @@ layout: post
 > 무방향 그래프의 깊이우선탐색 결과<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
 
-> visited[] 배열을 보면 모든 정점의 방문 여부를 false로 하여 방문하지 않은 것을 표시하며 stack[]에는 순회를 시작할 정점을 넣어둠
+> visited[] 배열을 보면 모든 정점의 방문 여부를 false로 하여 방문하지 않은 것을 표시하며 stack[]에는 순회를 시작할 정점을 넣어둠<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span><br>
 
 
