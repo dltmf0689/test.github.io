@@ -26,7 +26,6 @@ layout: post
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>  
 
 > [깊이 우선 탐색의 수행 순서]
-
 > ⑴ 시작 정점 v를 결정하여 방문한다.  
 > ⑵ 정점 v에 인접한 정점 중에서  
 >   ① 방문하지 않은 정점 w가 있으면, 정점 v를 스택에 push하고 정점 w를 방문한다. 그리고 w를 v로 하여 다시 ⑵를 반복한다.  
@@ -37,20 +36,17 @@ layout: post
 > 가장 마지막에 만났던 갈림길 간선이 있는 정점으로 되돌아와서 다른 방향의 간선으로 탐색을 계속 반복하여 결국 모든 정점을 방문하는 순회방법.  
 > 가장 마지막에 만났던 갈림길 간선의 정점으로 가장 먼저 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용.  
 
-> [알고리즘]
+> [알고리즘]  
 > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>  
 
-> ① 정점 A를 시작으로 깊이 우선 탐색을 시작
-
+> ① 정점 A를 시작으로 깊이 우선 탐색을 시작  
 > visited[A]←true;  
 > <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>  
 
 > ② 정점 A에 방문하지 않은 정점 B, C가 있으므로 A를 스택에 push 하고, 인접정점 B와 C 중에서 오름차순에 따라 B를 선택하여 탐색을 계속한다.  
-
 > push(stack, A);  
 > visited[B]←true;  
 > B 방문;  
-
 > <span class="image center"><img src="{{ 'assets/images/dfs_4.png' | relative_url }}" alt="" /></span>  
 
 
