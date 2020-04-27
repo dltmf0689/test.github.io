@@ -32,17 +32,43 @@ layout: post
 
 
 ```c++
-  public class DFS {
-    public static void depthFS(int[][] graph, int vertex){
-      Stack stack = new Stack(100);
-      boolean[] visited = new boolean[graph.length];
-      
-      for(int i=0; i<visited.length; i++){
-        visited[i] = false;
+public class DFS {
+  public static void depthFS(int[][] graph, int vertex){
+    Stack stack = new Stack(100);
+    boolean[] visited = new boolean[graph.length];
+
+    for(int i=0; i<visited.length; i++){
+      visited[i] = false;
+    }
+    stack.push(vertex);
+    while(!stack.isEmpty()) {
+      int v = stack.pop();
+      if(visited[v] == false) {
+        System.out.print(v + "  ");
+        visited[v] = true;
+        for(int i = graph[v].length-1; i >= 0; i--) {
+          if(graph[v][i] == 1) {
+            if(visited[i] == false) {
+              stack.push(i);
+            }
+          }
+        }
       }
-      stack.push(vertex);
     }
   }
+  public static void main(String[] args) {
+    int[][] graph = {
+                    {0,1,1,1,0,0,0},
+                    {1,0,0,0,1,0,0},
+                    {1,0,0,0,1,1,0},
+                    {1,0,0,0,0,1,0},
+                    {0,1,1,0,0,0,1},
+                    {0,0,1,1,0,0,1},
+                    {0,0,0,0,1,1,0}
+                    };
+    depthFS(graph,0);
+  }
+}
 ```
 
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
