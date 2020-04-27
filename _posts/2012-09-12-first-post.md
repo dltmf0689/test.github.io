@@ -5,6 +5,8 @@ layout: post
 ---
 
 
+<span class="image left"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
+
 ## 그래프 탐색 알고리즘
 (그래프의 모든 노드를 방문)
 
