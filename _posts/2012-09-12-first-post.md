@@ -35,7 +35,6 @@ layout: post
     public static void depthFS(int[][] graph, int vertex){
       Stack stack = new Stack(100);
       boolean[] visited = new boolean[graph.length];
-
       for(int i=0; i<visited.length; i++){
         visited[i] = false;
       }
