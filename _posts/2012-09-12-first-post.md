@@ -38,7 +38,7 @@ layout: post
 > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span><br>
 
 > stack[]을 pop하여 0을 삭제
-> 0 정점을 방문하고 visited[0]을 true로 바꾸어 <br>
+> 0 정점을 방문하고 visited[0]을 true로 바꿔줌 <br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span><br>
 
 > 정점 0과 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
@@ -62,6 +62,19 @@ layout: post
 > 2정점을 방문하고 visited[2]를 true로 바꿔줌<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_9.png' | relative_url }}" alt="" /></span><br>
 
+> 정점 2와 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_10.png' | relative_url }}" alt="" /></span><br>
+
+> stack[]을 pop하여 5를 삭제
+> 5정점을 방문하고 visited[5]를 true로 바꿔줌<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_11.png' | relative_url }}" alt="" /></span><br>
+
+> 정점 5와 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_12.png' | relative_url }}" alt="" /></span><br>
+
+> stack[]을 pop하여 3를 삭제
+> 3정점을 방문하고 visited[3]를 true로 바꿔줌<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_13.png' | relative_url }}" alt="" /></span><br>
 
 ```java
 public class DFS {
