@@ -22,7 +22,7 @@ layout: post
     - 가중치 및 비가중치 그래프에서는 거의 사용되지 않습니다.(불가능하다, 가능은하나... 와 같은 여러 의견들이 있습니다)
 
 > 1) DFS 수행과정
-> DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법  
+> DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법  <br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>  
 
 > [깊이 우선 탐색의 수행 순서]
@@ -38,16 +38,20 @@ layout: post
 > 가장 마지막에 만났던 갈림길 간선의 정점으로 가장 먼저 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용.  
 
 > [알고리즘]
-<!-- > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>   -->
+> <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>  
 
 > ① 정점 A를 시작으로 깊이 우선 탐색을 시작
 
 > visited[A]←true;  
-<!-- > <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>   -->
+> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>  
 
+> ② 정점 A에 방문하지 않은 정점 B, C가 있으므로 A를 스택에 push 하고, 인접정점 B와 C 중에서 오름차순에 따라 B를 선택하여 탐색을 계속한다.  
 
+> push(stack, A);  
+> visited[B]←true;  
+> B 방문;  
 
-
+> <span class="image center"><img src="{{ 'assets/images/dfs_4.png' | relative_url }}" alt="" /></span>  
 
 
 
