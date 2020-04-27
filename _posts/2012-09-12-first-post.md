@@ -21,17 +21,9 @@ layout: post
     - 트리에서 최단 거리 탐색 가능합니다.
     - 가중치 및 비가중치 그래프에서는 거의 사용되지 않습니다.(불가능하다, 가능은하나... 와 같은 여러 의견들이 있습니다)
 
-> 주어진 무방향 그래프 G = (V, E)가 있을때 정점 i에서 DFS수행하는 방법은 아래와 같습니다.  
-> 정점 i를 방문한다.  
-> 정점 i에 인접한 정점 중에서 아직 방문하지 않은 정점이 있으면 이 정점을 모두 stack에 저장한다.  
-> 스택에서 정점을 삭제하여 새로운 i를 설정하고 다시 단계 1부터 수행한다.  
-> 스택이 공백이 되면 연산을 종료한다.  
-> 단, 이 연산을 구하기 위해서는 정점들의 방문 여부를 표시해 두는 것이 필요하다. 이는 배열 visited[n]을 사용하여 아래와 같이 표기한다.
-> visited[i] = true // 방문, visited[i] = false // 미방문  
-
 > 1) DFS 수행과정
-> DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
+> DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법  
+> <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>  
 
 > [깊이 우선 탐색의 수행 순서]
 
@@ -46,12 +38,12 @@ layout: post
 > 가장 마지막에 만났던 갈림길 간선의 정점으로 가장 먼저 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용.  
 
 > [알고리즘]
-> <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span><br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>  
 
 > ① 정점 A를 시작으로 깊이 우선 탐색을 시작
 
-> visited[A]←true;<br>
-> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span><br>
+> visited[A]←true;  
+> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>  
 
 
 
