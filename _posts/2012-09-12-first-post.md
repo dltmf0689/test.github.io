@@ -32,7 +32,7 @@ layout: post
 
 
 
-<span class="image center"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span><br>
+<span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
 
 # 2. 너비 우선 탐색(BFS)
     - 현재 정점에 연결된 가까운 점들부터 탐색
