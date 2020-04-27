@@ -76,6 +76,26 @@ layout: post
 > 3정점을 방문하고 visited[3]를 true로 바꿔줌<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_13.png' | relative_url }}" alt="" /></span><br>
 
+> 정점 3과 인접한 모든 인접 노드 중 방문하지 않은 노드를 stack[]에 push
+> 하지만 정점 3은 인접한 노드중 방문하지 않은 노드가 없기 때문에 그냥 넘어감<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_14.png' | relative_url }}" alt="" /></span><br>
+
+> stack[]을 pop하여 6을 삭제하여 6정점을 방문하고 visited[6]을 true로 바꿔줌
+> 현재 모든 정점을 방문하였지만 아직 스택에는 데이터가 남아있음<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_15.png' | relative_url }}" alt="" /></span><br>
+
+> 모든 정점을 방문한 상태에서 스택에 데이터가 남아있는 경우 나머지 데이터들도 pop하지만 visited[]배열에 방문하지 않은 정점이 없기 때문에
+> 계속 pop 연산만 하고 모든 데이터가 pop이 되면 종료<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_16.png' | relative_url }}" alt="" /></span><br>
+
+
+
+
+
+
+
+
+
 ```java
 public class DFS {
   public static void depthFS(int[][] graph, int vertex){
