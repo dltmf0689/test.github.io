@@ -48,6 +48,23 @@ layout: post
 > [알고리즘]
 > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span><br>
 
+> ① 정점 A를 시작으로 깊이 우선 탐색을 시작
+
+> visited[A]←true;<br>
+> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 2. 너비 우선 탐색(BFS)
     - 현재 정점에 연결된 가까운 점들부터 탐색
     - 방법 : 큐를 이용해서 구현
