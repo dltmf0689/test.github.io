@@ -16,7 +16,6 @@ layout: post
     - 저장 공간이 많이 필요하지 않아서(재귀로 구현했을 경우) 모든 경우의 수 찾기에 적합
 
     *** 참고해야할 점
-
     - 방문했던 정점을 재 탐색 하지 않기위해, 따로 배열을 만들어서 방문한 곳인지 체크해야합니다.
     - 완전 탐색 입니다.
     - 트리에서 최단 거리 탐색 가능합니다.
@@ -34,8 +33,8 @@ layout: post
 > 무방향 그래프의 깊이우선탐색 결과<br>
 > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span><br>
 
-
-
+> visited[] 배열을 보면 모든 정점의 방문 여부를 false로 하여 방문하지 않은 것을 표시하며 stack[]에는 순회를 시작할 정점을 넣어둠
+> <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span><br>
 
 
 
