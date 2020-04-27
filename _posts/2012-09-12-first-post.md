@@ -88,7 +88,7 @@ F 방문;
 <span class="image center"><img src="{{ 'assets/images/dfs_11.png' | relative_url }}" alt="" /></span>  
 
 > ⑩ 정점 F에서 방문하지 않은 인접정점이 없으므로, 마지막 정점으로 돌아가기 위해 스택을 pop 하여 받은 정점 G에 대해서 방문하지 않은 인접정점이 있는지 확인한다.  
-pop(stack);
+pop(stack);  
 <span class="image center"><img src="{{ 'assets/images/dfs_12.png' | relative_url }}" alt="" /></span>  
 
 > ⑪ 정점 G에서 방문하지 않은 인접정점이 없으므로, 다시 마지막 정점으로 돌아가기 위해 스택을 pop 하여 받은 정점 D에 대해서 방문하지 않은 인접정점이 있는지 확인한다.  
