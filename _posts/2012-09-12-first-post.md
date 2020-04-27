@@ -23,14 +23,14 @@ layout: post
 
 > 1) DFS 수행과정
 > DFS란 스택을 이용하여 그래프를 탐색해 나가는 방법으로써 가능한 깊이 vertex를 들어간뒤 특정 vertex에서 더이상 갈곳이 없으면 그 vertex를 체크한뒤 다시 올라가서 갈 수 있는 모든 vertex를 탐색해나가는 기법  
-> <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>  
+<!-- > <span class="image center"><img src="{{ 'assets/images/dfs_1.png' | relative_url }}" alt="" /></span>   -->
 
 > [깊이 우선 탐색의 수행 순서]
 
 > ⑴ 시작 정점 v를 결정하여 방문한다.  
 > ⑵ 정점 v에 인접한 정점 중에서  
-> ① 방문하지 않은 정점 w가 있으면, 정점 v를 스택에 push하고 정점 w를 방문한다. 그리고 w를 v로 하여 다시 ⑵를 반복한다.  
-> ② 방문하지 않은 정점이 없으면, 탐색의 방향을 바꾸기 위해서 스택을 pop하여 받은 가장 마지막 방문 정점을 v로 하여 다시 ⑵를 반복한다.  
+>   ① 방문하지 않은 정점 w가 있으면, 정점 v를 스택에 push하고 정점 w를 방문한다. 그리고 w를 v로 하여 다시 ⑵를 반복한다.  
+>   ② 방문하지 않은 정점이 없으면, 탐색의 방향을 바꾸기 위해서 스택을 pop하여 받은 가장 마지막 방문 정점을 v로 하여 다시 ⑵를 반복한다.  
 > ⑶ 스택이 공백이 될 때까지 ⑵를 반복한다.  
 
 > 시작 정점의 한 방향으로 갈 수 있는 경로가 있는 곳까지 깊이 탐색해 가다가 더 이상 갈 곳이 없게 되면,  
@@ -38,12 +38,12 @@ layout: post
 > 가장 마지막에 만났던 갈림길 간선의 정점으로 가장 먼저 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용.  
 
 > [알고리즘]
-> <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>  
+<!-- > <span class="image center"><img src="{{ 'assets/images/dfs_2.png' | relative_url }}" alt="" /></span>   -->
 
 > ① 정점 A를 시작으로 깊이 우선 탐색을 시작
 
 > visited[A]←true;  
-> <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>  
+<!-- > <span class="image center"><img src="{{ 'assets/images/dfs_3.png' | relative_url }}" alt="" /></span>   -->
 
 
 
