@@ -2,6 +2,8 @@
 title: First Post
 author: Chris
 layout: post
+categories: [blog, travel]
+tags: [hot, summer]
 ---
 
 
