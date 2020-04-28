@@ -2,6 +2,7 @@
 title: Third Post
 author: Chris
 layout: post
+hide: true
 ---
 
 <!-- See the icon?
