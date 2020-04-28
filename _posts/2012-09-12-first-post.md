@@ -2,6 +2,7 @@
 title: First Post
 author: Chris
 layout: post
+categories: [test]
 ---
 
 
