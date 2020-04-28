@@ -1,5 +1,5 @@
 ---
-title: First Post
+title: 그래프 탐색 알고리즘
 author: Chris
 layout: post
 categories: [Algorithm]
