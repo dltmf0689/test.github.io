@@ -1,5 +1,5 @@
 ---
-title: MST,Minimum Spanning Tree
+title: Minimum Spanning Tree
 author: Iseul
 layout: post
 categories: [Algorithm]
