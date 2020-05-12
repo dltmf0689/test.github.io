@@ -252,6 +252,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll (~> 3.5)
   jekyll-feed (~> 0.12)
   jekyll-include-cache
   jekyll-seo-tag (~> 2.6)
